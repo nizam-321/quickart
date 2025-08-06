@@ -34,7 +34,7 @@ const Navbar = () => {
                 <Link href="#">New Releases</Link>
               </li>
               <li className="hover hover:text-orange-500 transition duration-300">
-                <Link href="#">Today's Deals</Link>
+                <Link href="#">Todays Deals</Link>
               </li>
               <li className="hover hover:text-orange-500 transition duration-300">
                 <Link href="#">Customer Service</Link>
