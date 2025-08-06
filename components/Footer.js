@@ -30,7 +30,7 @@ const Footer = () => {
               Gift Ideas
             </li>
             <li className="float-left text-[16px] text-[#f1f1f1] pt-[20px] px-[10px] pb-0 cursor-pointer hover hover:text-orange-600 transition duration-300">
-              Today's Deals
+              Todays Deals
             </li>
             <li className="float-left text-[16px] text-[#f1f1f1] pt-[20px] px-[10px] pb-0 cursor-pointer hover hover:text-orange-600 transition duration-300">
               Best Sellers
