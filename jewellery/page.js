@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, {useState, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Card from "@/components/Card";
+import ProductModal from "@/components/ProductModal";
 
 const Jewellery = () => {
   const scrollRef = useRef(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
    const products = [
     {
       title: "Jumkas",
@@ -57,6 +59,7 @@ const Jewellery = () => {
             title={product.title}
             price={product.price}
             imageUrl={product.imageUrl}
+            onClick={() => setSelectedProduct(product)}
           />
         ))}
       </div>
@@ -71,6 +74,12 @@ const Jewellery = () => {
         </button>
       </div>
     </div>
+     {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
    </section>
   )
 };

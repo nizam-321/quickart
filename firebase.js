@@ -1,22 +1,50 @@
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// import { getAuth } from "firebase/auth";
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBsXnLmVPsa96zjLNXIJqWys2Xn7gqzADg",
+//   authDomain: "quckkart.firebaseapp.com",
+//   projectId: "quckkart",
+//   storageBucket: "quckkart.firebasestorage.app",
+//   messagingSenderId: "75953989798",
+//   appId: "1:75953989798:web:cee8fda69e3a57dabf2c67",
+//   measurementId: "G-GLP35BDS1E"
+// };
+
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+// const auth = getAuth(app);
+
+// export { auth };
+
+
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC7nGXe-xY6X0mZbDqhDyBTIKbNI1nl6Bo",
-  authDomain: "quickkart-9392c.firebaseapp.com",
-  projectId: "quickkart-9392c",
-  storageBucket: "quickkart-9392c.firebasestorage.app",
-  messagingSenderId: "835790465306",
-  appId: "1:835790465306:web:251c1c2aac6e79d9e064a3"
+    apiKey: "AIzaSyBsXnLmVPsa96zjLNXIJqWys2Xn7gqzADg",
+  authDomain: "quckkart.firebaseapp.com",
+  projectId: "quckkart",
+  storageBucket: "quckkart.firebasestorage.app",
+  messagingSenderId: "75953989798",
+  appId: "1:75953989798:web:cee8fda69e3a57dabf2c67",
+  measurementId: "G-GLP35BDS1E"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
-const db = getFirestore(app);
+let analytics;
+if (typeof window !== "undefined") {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
 
-export { auth, db };
+const auth = getAuth(app);
+
+export { auth, analytics };

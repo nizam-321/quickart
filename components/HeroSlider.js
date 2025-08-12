@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Link from "next/link";
 
 const slides = [
   {
@@ -45,14 +46,17 @@ const HeroSlider = () => {
       <div className="flex flex-col items-center justify-center h-full text-white px-4">
         <h1 className="text-3xl md:text-6xl font-bold mb-4">{currentSlide.title}</h1>
         <h2 className="text-xl md:text-3xl font-semibold">{currentSlide.subtitle}</h2>
-
-        <button className="relative overflow-hidden text-white bg-[#2b2a29] text-sm font-bold mt-10 p-4 px-12 rounded cursor-pointer group">
+        
+        <Link href="/#clothes">
+        <button className="relative overflow-hidden text-white bg-[#2b2a29] text-sm font-bold mt-10 p-4 px-12 cursor-pointer group">
           <span className="relative z-10">BUY NOW</span>
           <span className="absolute inset-0 bg-orange-600 transform scale-x-0 origin-left group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out"></span>
         </button>
+        </Link>
       </div>
-
+    
       {/* Left Arrow */}
+      
       <button
         onClick={prevSlide}
         className="absolute left-4 lg:left-40 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-4 rounded-full"
