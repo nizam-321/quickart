@@ -48,10 +48,6 @@ const HeroSlider = () => {
         <h2 className="text-xl md:text-3xl font-semibold">{currentSlide.subtitle}</h2>
         
         <Link href="/#clothes">
-        // <button className="relative overflow-hidden text-white bg-[#2b2a29] text-sm font-bold mt-10 p-4 px-12 cursor-pointer group">
-        //   <span className="relative z-10">BUY NOW</span>
-        //   <span className="absolute inset-0 bg-orange-600 transform scale-x-0 origin-left group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out"></span>
-        // </button>
           <button className="relative overflow-hidden text-white bg-[#2b2a29] text-sm font-bold mt-10 p-4 px-12 cursor-pointer group active:scale-95 transition-transform duration-100">
             <span className="relative z-10">BUY NOW</span>
             <span className="absolute inset-0 bg-orange-600 transform scale-x-0 origin-left group-hover:scale-x-100 group-hover:origin-left transition-transform duration-500 ease-out"></span>
