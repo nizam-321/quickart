@@ -29,7 +29,7 @@ const Card = ({ title, price, imageUrl, onClick, onBuyNow }) => {
 
       <div className="flex justify-between w-full mt-auto">
         <button
-          className="text-[16px] text-[#f26522] bg-transparent font-bold hover:underline"
+          className="text-[16px] text-[#f26522] bg-transparent font-bold hover:underline active:scale-95  transition-all duration-150 ease-in-out px-3 py-1 rounded"
           onClick={() => {
             if (typeof onBuyNow === "function") {
               onBuyNow();
@@ -41,7 +41,7 @@ const Card = ({ title, price, imageUrl, onClick, onBuyNow }) => {
           Buy Now
         </button>
         <button
-          className="text-[16px] text-[#262626] bg-transparent hover:underline"
+          className="text-[16px] text-[#262626] bg-transparent hover:underline active:text-blue-600 transition-colors duration-150"
           onClick={() => {
             console.log("button clicked");
             if (typeof onClick === "function") {

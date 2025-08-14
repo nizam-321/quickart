@@ -64,13 +64,13 @@ const Clothes = () => {
         <div className="hidden md:flex gap-2 text-white">
           <button
             onClick={() => scroll("left")}
-            className="bg-[#30302e] p-4 hover:bg-orange-600 transition duration-300"
+            className="bg-[#30302e] p-4 hover:bg-orange-600 transition duration-300 active:scale-95 active:bg-orange-900 transition-all duration-150 ease-in-out"
           >
             <FaChevronLeft />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="bg-[#30302e] p-4 hover:bg-orange-600 transition duration-300"
+            className="bg-[#30302e] p-4 hover:bg-orange-600 transition duration-300 active:scale-95 active:bg-orange-900 transition-all duration-150 ease-in-out"
           >
             <FaChevronRight />
           </button>
